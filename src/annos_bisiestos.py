@@ -1,5 +1,11 @@
 def evaluar(anno):
-    # TODO: Coloca aquí el código del ejercicio 2: Años bisiestos
+    # TODO: 
+    if anno % 4 == 0:
+        print(int(anno), str(' es bisiesto'))
+    elif anno % 400 == 0:
+        print(int(anno) , str(' es bisiesto'))
+    else :
+        print(int(anno) , str(' no es bisiesto'))
     return "";
 
 if __name__ == '__main__':
