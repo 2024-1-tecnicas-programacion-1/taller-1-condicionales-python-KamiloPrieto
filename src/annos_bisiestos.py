@@ -1,12 +1,14 @@
 def evaluar(anno):
     # TODO: 
-    if anno % 4 == 0:
-        print(int(anno), str(' es bisiesto'))
+    if anno % 4 != 0:
+        return str(anno) + " no es bisiesto"
+    elif anno % 100 != 0:
+        return str(anno) + " es bisiesto"
     elif anno % 400 == 0:
-        print(int(anno) , str(' es bisiesto'))
+        return str(anno) + " es bisiesto"
     else :
-        print(int(anno) , str(' no es bisiesto'))
-    return "";
+        return str(anno) + " no es bisiesto"
+    
 
 if __name__ == '__main__':
     print("Año:", end="")
