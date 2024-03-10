@@ -17,8 +17,35 @@ class TestSetDeTenis(unittest.TestCase):
         valor_actual = evaluar(4, 5)
         self.assertEqual(valor_esperado, valor_actual)
     
-    # TODO: Agrega tus otros casos de prueba aquí
+    def test_gano_a(self):
+        valor_esperado = "Ganó A"
+        valor_actual = evaluar(6, 4)
+        self.assertEqual(valor_esperado, valor_actual)
     
+    def test_gano_b(self):
+        valor_esperado = "Ganó B"
+        valor_actual = evaluar(5, 7)
+        self.assertEqual(valor_esperado, valor_actual)
+
+    def test_aun_no_termina2(self):
+        valor_esperado = "Aún no termina"
+        valor_actual = evaluar(6, 6)
+        self.assertEqual(valor_esperado, valor_actual)
+
+    def test_invalido(self):
+        valor_esperado = "Inválido"
+        valor_actual = evaluar(3, 7)
+        self.assertEqual(valor_esperado, valor_actual)
+
+    def test_invalido2(self):
+        valor_esperado = "Inválido"
+        valor_actual = evaluar(-7, 5)
+        self.assertEqual(valor_esperado, valor_actual)
+
+    def test_invalido3(self):
+        valor_esperado = "Inválido"
+        valor_actual = evaluar(8,6)
+        self.assertEqual(valor_esperado, valor_actual)
 
 if __name__ == '__main__':
     unittest.main()
